@@ -1,8 +1,6 @@
 package com.example.helperbot.commands;
 
-import java.util.List;
-
 @FunctionalInterface
-public interface Command {
+public interface ICommand {
     String executeCommand(Long chatId);
 }

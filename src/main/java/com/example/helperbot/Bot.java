@@ -35,7 +35,6 @@ public class Bot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         if (update.hasMessage()) {
             Message message = update.getMessage();
-
             Optional.ofNullable(commandsPool.executeCommand(message.getText(), message.getChatId()))
                     .ifPresent(answerText -> {
                         SendMessage response = new SendMessage();
